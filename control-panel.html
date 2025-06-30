@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control Remoto</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .control-group { margin-bottom: 15px; }
+        button { padding: 8px 15px; margin: 0 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Control Remoto del Marcador</h2>
+    <div class="control-group">
+        <label>Equipo Local: <input type="text" id="control-team1" value="Nottingham Miedo"></label>
+    </div>
+    <div class="control-group">
+        <label>Equipo Visitante: <input type="text" id="control-team2" value="Rival"></label>
+    </div>
+    <div class="control-group">
+        <button onclick="updateGoal('team1', '1T')">+1 Local (1T)</button>
+        <button onclick="updateGoal('team2', '1T')">+1 Visitante (1T)</button>
+    </div>
+    <div class="control-group">
+        <button onclick="updateGoal('team1', '2T')">+1 Local (2T)</button>
+        <button onclick="updateGoal('team2', '2T')">+1 Visitante (2T)</button>
+    </div>
+    <div class="control-group">
+        <button onclick="controlTimer('start')">▶️ Iniciar</button>
+        <button onclick="controlTimer('pause')">⏸️ Pausar</button>
+        <button onclick="controlTimer('reset')">🔄 Reiniciar</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
